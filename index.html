@@ -12,6 +12,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <script src="main.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -24,8 +29,8 @@
             <li class="navbar__menu__item active" data-link="#home">Home</li>
             <li class="navbar__menu__item" data-link="#about">About</li>
             <li class="navbar__menu__item" data-link="#skills">Skills</li>
-            <li class="navbar__menu__item" data-link="#work">Work</li>
-            <li class="navbar__menu__item" data-link="#testimonials">Testimonials</li>
+            <li class="navbar__menu__item" data-link="#work">Projects</li>
+            <!-- <li class="navbar__menu__item" data-link="#testimonials">Testimonials</li> -->
             <li class="navbar__menu__item" data-link="#contact">Contact</li>
         </ul>
 
@@ -39,17 +44,25 @@
     <section id="home">
         <div class="home__container">
             <img src="imgs/profile.png" alt="Seungyun's profile photo" class="home__avatar"> 
-            <h1 class="home__title">Hello, <br />I'm Dream Coder</h1>
-            <h2 class="home__description">A Software Engineer and a Designer</h2>
+            <h1 class="home__title">Hello, I'm Seungyun Kim</h1>
+            <h2 class="home__description">A Designer of My Life</h2>
             <button class="home__contact" data-link="#contact">CONTACT ME</button>
         </div>
         
     </section>
 
     <!-- About -->
-    <section id="about" class="section section__container">
+    <section id="about" class="section section__container" >
         <h1>About me</h1>
-        <p>I've been learning about programming for a half year. Even though I major in Mechanical System Design Engineering, have a passion for Front-end, Back-end and design.</p>
+        <p  style="line-height: 2.5em; margin-top: 40px;">무엇인가를 만들어내는 창조적 활동에 즐거움을 느끼며 살고 있는 예비 엔지니어이자 디자이너, 예술가입니다. 
+        <br />프론트/백엔드, 앱/웹, 음악, 미술 등 전반적인 예술활동에 큰 열정을 가지고 있으며 하루하루 배움을 통해 나의 생각을 표현하고 있습니다.
+        <br />서로 다른 배경의 사람을 만나 저마다의 이야기, 생각을 나누며 서로를 발전시키는 순간은 언제나 새롭고 흥미롭게 다가옵니다. 
+        <br />저의 이야기 또한 이 글을 읽는 분들께 흥미롭고, 자극을 불러 일으킬 수 있는 효과를 가져올 수 있으면 좋겠습니다.</p>
+        
+    </section>
+
+    <section id="skills" class="section section__container" style="margin-top: 80px;">
+        <h1>Skills and Experienced</h1>
         <div class="about__major">
             <div class="major">
                 <div class="major__icon">
@@ -57,8 +70,9 @@
                 </div>
                 <h2 class="major__title">Front-end</h2>
                 <div class="major__description">
-                    HTML, CSS, JavaScript, TypeScript,
-                    <br />React, Vue, Web APIs
+                    HTML, CSS, JavaScript, 
+                    <br />TypeScript, Vue, Angular, 
+                    <br />Ionic
                 </div>
             </div>  
             <div class="major">
@@ -67,21 +81,44 @@
                 </div>
                 <h2 class="major__title">Back-end</h2>
                 <div class="major__description">
-                   Android, iOS, React Native, Flutter,
-                   <br />Java, Swift, Kotlin
+                   Java, Spring Boot, JPA, 
+                   <br />Python
                 </div>
             </div>  
             <div class="major">
                 <div class="major__icon">
                     <i class="fas fa-palette"></i>
                 </div>
-                <h2 class="major__title">Design</h2>
+                <h2 class="major__title">Art</h2>
                 <div class="major__description">
-                    Photoshop, Illustrator, XD
+                    Photoshop, Lightroom, 
+                    <br />Illustrator, Indesign, XD, 
+                    <br />Painting, FinalCut, 
+                    <br />LumaFusion
+                </div>
+            </div> 
+            <div class="major">
+                <div class="major__icon">
+                    <i class="fas fa-music"></i>
+                </div>
+                <h2 class="major__title">Music</h2>
+                <div class="major__description">
+                    Hip-Hop, MIDI,
+                    <br />Logic, FL Studio
+                </div>
+            </div>
+            <div class="major">
+                <div class="major__icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h2 class="major__title">etc</h2>
+                <div class="major__description">
+                    Github, Matlab, 
+                    <br />Numbers, Keynote
                 </div>
             </div>
         </div>
-        <div class="about__jobs">
+        <!-- <div class="about__jobs">
             <div class="job">
                 <img src="imgs/jobs/홍대 마크.png" alt="" class="job__logo">
                 <div class="job__description">
@@ -96,11 +133,11 @@
                     <p class="job__period">2014~2022</p>
                 </div>
             </div>
-        </div>
+        </div> -->
     </section>
 
     <!-- Skills -->
-    <section id="skills" class="section">
+    <!-- <section id="skills" class="section">
         <div class="section__container">
             <h1>Skills</h1>
             <h2>Skills & Attributes</h2>
@@ -184,83 +221,476 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Work -->
     <section id="work" class="section">
         <div class="section__container">
-            <h1>My work</h1>
-        <h3>Projects</h3>
-        <div class="work__categories">
-            <button class="category__btn selected" data-filter = "*">All<span class="category__count">8</span></button>
-            <button class="category__btn" data-filter = "front-end">Front-end<span class="category__count">3</span></button>
-            <button class="category__btn" data-filter = "back-end">Back-end<span class="category__count">2</span></button>
-            <button class="category__btn" data-filter = "design">Design<span class="category__count">3</span></button>
-        </div>
+            <h1>My Projects</h1>
+       
+            <div class="work__categories">
+                <button class="category__btn selected" data-filter = "*">All</button>
+                <button class="category__btn" data-filter = "human">휴먼컬러 앱</button>
+                <button class="category__btn" data-filter = "drone">졸업프로젝트</button>
+                <button class="category__btn" data-filter = "wall">벽화</button>
+                <button class="category__btn" data-filter = "portrait" style="margin-top: 10px;">초상화 선물</button>
+                <button class="category__btn" data-filter = "music" style="margin-top: 10px;">음악</button>
+                <button class="category__btn" data-filter = "painting">드로잉</button>
+                <button class="category__btn" data-filter = "sculpture">조형</button>
+                <button class="category__btn" data-filter = "mini">미니게임</button>
 
-        <div class="work__projects">
-            <a href="https://github.com/sy5072" class="project" target="blank" data-type="front-end">
-            <img src="imgs/projects/project1.png" alt="Youtube" class="project__img">
-            <div class="project__description">
-                <h3>Youtube Site</h3>
-                <span>Clone codding with HTML and CSS</span>
             </div>
-            </a>   
-            <a href="https://github.com/sy5072" class="project" target="blank" data-type="front-end">
-                <img src="imgs/projects/project2.png" alt="Youtube" class="project__img">
+
+            <!-- <div class="work__projects">
+                <a href="https://github.com/sy5072" class="project" target="blank" data-type="front-end">
+                <img src="imgs/projects/project1.png" alt="Youtube" class="project__img">
                 <div class="project__description">
                     <h3>Youtube Site</h3>
                     <span>Clone codding with HTML and CSS</span>
                 </div>
-            </a>    
-            <a href="https://github.com/sy5072" class="project" target="blank" data-type="design">
-                <img src="imgs/projects/project3.png" alt="Youtube" class="project__img">
-                <div class="project__description">
-                    <h3>Youtube Site</h3>
-                    <span>Clone codding with HTML and CSS</span>
+                </a>   
+                <a href="https://github.com/sy5072" class="project" target="blank" data-type="front-end">
+                    <img src="imgs/projects/project2.png" alt="Youtube" class="project__img">
+                    <div class="project__description">
+                        <h3>Youtube Site</h3>
+                        <span>Clone codding with HTML and CSS</span>
+                    </div>
+                </a>    
+                <a href="https://github.com/sy5072" class="project" target="blank" data-type="design">
+                    <img src="imgs/projects/project3.png" alt="Youtube" class="project__img">
+                    <div class="project__description">
+                        <h3>Youtube Site</h3>
+                        <span>Clone codding with HTML and CSS</span>
+                    </div>
+                </a>
+                <a href="https://github.com/sy5072" class="project" target="blank" data-type="front-end">
+                    <img src="imgs/projects/project4.png" alt="Youtube" class="project__img">
+                    <div class="project__description">
+                        <h3>Youtube Site</h3>
+                        <span>Clone codding with HTML and CSS</span>
+                    </div>
+                </a>
+                <a href="https://github.com/sy5072" class="project" target="blank" data-type="design">
+                    <img src="imgs/projects/project5.png" alt="Youtube" class="project__img">
+                    <div class="project__description">
+                        <h3>Youtube Site</h3>
+                        <span>Clone codding with HTML and CSS</span>
+                    </div>
+                </a>     
+                <a href="https://github.com/sy5072" class="project" target="blank" data-type="back-end">
+                    <img src="imgs/projects/project6.png" alt="Youtube" class="project__img">
+                    <div class="project__description">
+                        <h3>Youtube Site</h3>
+                        <span>Clone codding with HTML and CSS</span>
+                    </div>
+                </a>     
+                <a href="https://github.com/sy5072" class="project" target="blank" data-type="back-end">
+                    <img src="imgs/projects/project7.png" alt="Youtube" class="project__img">
+                    <div class="project__description">
+                        <h3>Youtube Site</h3>
+                        <span>Clone codding with HTML and CSS</span>
+                    </div>
+                </a>     
+                <a href="https://github.com/sy5072" class="project" target="blank" data-type="design">
+                    <img src="imgs/projects/project8.png" alt="Youtube" class="project__img">
+                    <div class="project__description">
+                        <h3>Demon Slayer4</h3>
+                        <span>Clone codding with HTML and CSS</span>
+                    </div>
+                </a>         
+            </div> -->
+                <div class="work__projects">    
+                    <div class="project" data-type="human" style="background-color: transparent; width: 600px; height: 140x;">
+                        휴먼컬러 앱 개발 참여
+                        <br />
+                        <br />단시간에 Android, iOS 동시 개발을 필요로 했기에 Angular, Ionic 프레임워크를 이용하였다.
+                        <br />주요 로직과 인터페이스 구축을 담당했으며
+                        <br />Adobe XD를 통한 UI/UX 디자인 샘플을 먼저 제작 하였다.
+                        <br />완전한 하나의 앱(제품) 제작에 참여하면서 버튼 하나하나의 기능, 로직에 신경을 기울여야하며
+                        <br />사용자의 입장에서 바라보고 끊임없는 버그 수정을 필요로 한다는 것을 깨달았다.
+                        <br />현재 플레이스토어 출시가 완료되었으며, 앱스토어는 출시 예정이다.
+                    </div>
                 </div>
-            </a>
-            <a href="https://github.com/sy5072" class="project" target="blank" data-type="front-end">
-                <img src="imgs/projects/project4.png" alt="Youtube" class="project__img">
-                <div class="project__description">
-                    <h3>Youtube Site</h3>
-                    <span>Clone codding with HTML and CSS</span>
+                <div class="work__projects">    
+                    <a href="/img/휴먼컬러/human1.JPG" class="project" data-type="human" data-lightbox="human">
+                        <img src="/img/휴먼컬러/human1.JPG" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>휴먼컬러</h3>
+                            <span>앱 구동화면</span>
+                        </div>
+                    </a>
+                    <a href="/img/휴먼컬러/human2.JPG" class="project" data-type="human" data-lightbox="human">
+                        <img src="/img/휴먼컬러/human2.JPG" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>휴먼컬러</h3>
+                            <span>앱 구동화면</span>
+                        </div>
+                    </a>
+                    <a href="/img/휴먼컬러/human3.JPG" class="project" data-type="human" data-lightbox="human">
+                        <img src="/img/휴먼컬러/human3.JPG" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>휴먼컬러</h3>
+                            <span>앱 구동화면</span>
+                        </div>
+                    </a>
+                    <a href="/img/휴먼컬러/human4.JPG" class="project" data-type="human" data-lightbox="human">
+                        <img src="/img/휴먼컬러/human4.JPG" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>휴먼컬러</h3>
+                            <span>앱 구동화면</span>
+                        </div>
+                    </a>
+                    <a href="/img/휴먼컬러/human5.png" class="project" data-type="human" data-lightbox="human">
+                        <img src="/img/휴먼컬러/human5.png" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>휴먼컬러</h3>
+                            <span>XD 앱 디자인</span>
+                        </div>
+                    </a>
                 </div>
-            </a>
-            <a href="https://github.com/sy5072" class="project" target="blank" data-type="design">
-                <img src="imgs/projects/project5.png" alt="Youtube" class="project__img">
-                <div class="project__description">
-                    <h3>Youtube Site</h3>
-                    <span>Clone codding with HTML and CSS</span>
+               
+                <div class="work__projects">    
+                    <div class="project" data-type="drone" style="background-color: transparent; width: 900px; height: 200px;">
+                        졸업 팀 프로젝트 - 방향 조종이 가능한 드론용 낙하산 
+                        <br />
+                        <br />드론 추락시 아두이노(C언어)를 이용한 모터 제어를 통해 
+                        <br />낙하산 줄 길이를 조절하여 방향을 전환하고 안정적인 착륙을 이뤄내도록 하였다.
+                        <br />낙하산 형상, 줄 길이, 모터 등을 설계하여 이상적 항력계수를 갖는 모델을 선정하였고
+                        <br />App Inventor를 통해 간단한 앱을 제작하여 사용자가 원활한 조종을 가능하게 하였다.
+                        <br />이 앱에서는 라즈베리(Python)를 통한 드론의 GPS 위치 추적(html, css, javascript를 통한 웹사이트 제작) 기능과
+                        <br />낙하시 라이브 스트리밍을 통한 드론 아래의 지형, 지물을 파악 기능을 포함한다.
+                    </div>
                 </div>
-            </a>     
-            <a href="https://github.com/sy5072" class="project" target="blank" data-type="back-end">
-                <img src="imgs/projects/project6.png" alt="Youtube" class="project__img">
-                <div class="project__description">
-                    <h3>Youtube Site</h3>
-                    <span>Clone codding with HTML and CSS</span>
+                <div class="work__projects">    
+                    <a href="/img/드론용 낙하산/drone1.JPG" class="project" data-type="drone" data-lightbox="drone">
+                        <img src="/img/드론용 낙하산/drone1.JPG" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>드론용 낙하산</h3>
+                            <span>낙하산 발사체</span>
+                        </div>
+                    </a>
+                    <a href="/img/드론용 낙하산/drone2.JPG" class="project" data-type="drone" data-lightbox="drone">
+                        <img src="/img/드론용 낙하산/drone2.JPG" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>드론용 낙하산</h3>
+                            <span>발사체 내부 시스템</span>
+                        </div>
+                    </a>
+                    <a href="/img/드론용 낙하산/drone3.png" class="project" data-type="drone" data-lightbox="drone">
+                        <img src="/img/드론용 낙하산/drone3.png" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>드론용 낙하산</h3>
+                            <span>발사체와 조종부</span>
+                        </div>
+                    </a>
+                    <a href="/img/드론용 낙하산/drone4.JPG" class="project" data-type="drone" data-lightbox="drone">
+                        <img src="/img/드론용 낙하산/drone4.JPG" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>드론용 낙하산</h3>
+                            <span>조종부 앱 구동화면</span>
+                        </div>
+                    </a>
+                    <a href="/img/드론용 낙하산/drone5.png" class="project" data-type="drone" data-lightbox="drone">
+                        <img src="/img/드론용 낙하산/drone5.png" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>드론용 낙하산</h3>
+                            <span>낙하산 발사 테스트</span>
+                        </div>
+                    </a>
+                    <a href="/img/드론용 낙하산/drone6.Jpeg" class="project" data-type="drone" data-lightbox="drone">
+                        <img src="/img/드론용 낙하산/drone6.Jpeg" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>드론용 낙하산</h3>
+                            <span>테스트에 사용된 드론</span>
+                        </div>
+                    </a>
                 </div>
-            </a>     
-            <a href="https://github.com/sy5072" class="project" target="blank" data-type="back-end">
-                <img src="imgs/projects/project7.png" alt="Youtube" class="project__img">
-                <div class="project__description">
-                    <h3>Youtube Site</h3>
-                    <span>Clone codding with HTML and CSS</span>
+               
+                <div class="work__projects">    
+                    <div class="project" data-type="wall" style="background-color: transparent; width: 600px; height: 180px;">
+                        벽화 작업
+                        <br />
+                        <br />군복무 시절 몸이 아픈 병사들을 위한 공간의 벽화 작업 지원자를 모집하여 자원하였고 
+                        <br />기회를 얻어 그룹 리더로 참여하였다.
+                        <br />지금까지와는 다른 스케일의 작품 경험을 얻을 수 있었고 다시금 그림의 즐거움을 느낄 수 있었다.
+                        <br />또한 나 혼자만의 작업이 아닌 다른 사람과의 협업을 통한 작품 활동이 새롭게 다가왔고
+                        <br />그룹원들을 통해 지금까지 갖고있던 나의 방식과는 다른 기법, 표현력을 배울 수 있었다.
+                    </div>
                 </div>
-            </a>     
-            <a href="https://github.com/sy5072" class="project" target="blank" data-type="design">
-                <img src="imgs/projects/project8.png" alt="Youtube" class="project__img">
-                <div class="project__description">
-                    <h3>Demon Slayer4</h3>
-                    <span>Clone codding with HTML and CSS</span>
+                <div class="work__projects">    
+                    <a href="/img/벽화/wallpainting1.JPG" class="project" data-type="wall" data-lightbox="wall">
+                        <img src="/img/벽화/wallpainting1.JPG" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>서울 <2016></h3>
+                            <span>벽화</span>
+                        </div>
+                    </a>
+                    <a href="/img/벽화/wallpainting2.JPG" class="project" data-type="wall" data-lightbox="wall">
+                        <img src="/img/벽화/wallpainting2.JPG" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>산토리니 <2016></h3>
+                            <span>벽화</span>
+                        </div>
+                    </a><a href="/img/벽화/wallpainting3.JPG" class="project" data-type="wall" data-lightbox="wall">
+                        <img src="/img/벽화/wallpainting3.JPG" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>숲속 <2016></h3>
+                            <span>벽화</span>
+                        </div>
+                    </a>
+                    <a href="/img/벽화/wallpainting4.JPG" class="project" data-type="wall" data-lightbox="wall">
+                        <img src="/img/벽화/wallpainting4.JPG" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>해변 <2016></h3>
+                            <span>벽화</span>
+                        </div>
+                    </a>
                 </div>
-            </a>         
-        </div>
+                <div class="work__projects">    
+                    <div class="project" data-type="portrait" style="background-color: transparent; width: 800px; height: 180px;">
+                        친구들을 위한 초상화 선물 프로젝트
+                        <br />
+                        <br />해외 어학연수 시절, 어학원 특성상 매주 여러 친구들을 새롭게 만나고 그와 동시에 다른 친구와의 이별의 순간을 맞이했다.
+                        <br />"가장 기억에 남을만한 선물이 뭐가 있을까?" 고민한 끝에 이별의 순간마다 친구들을 기억하며 초상화를 그려 주었다.
+                        <br />밤새 초상화를 완성하고 선물한 경우가 대부분이였지만 선물을 받은 친구들의 표정을 보면 전혀 피곤하지가 않았다. 
+                        <br />가끔 그림을 볼 때면 나를 떠올려주길 바란다. 
+                        
+                    </div>
+                </div>
+                <div class="work__projects">    
+                    <a href="/img/친구 초상화/portrait1.jpeg" class="project" data-type="portrait" data-lightbox="portrait">
+                        <img src="/img/친구 초상화/portrait1.jpeg" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>Dom and Erika</h3>
+                            <span>초상화</span>
+                        </div>
+                    </a>
+                    <a href="/img/친구 초상화/portrait2.jpeg" class="project" data-type="portrait" data-lightbox="portrait">
+                        <img src="/img/친구 초상화/portrait2.jpeg" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>Nes</h3>
+                            <span>초상화</span>
+                        </div>
+                    </a>
+                    <a href="/img/친구 초상화/portrait3.jpeg" class="project" data-type="portrait" data-lightbox="portrait">
+                        <img src="/img/친구 초상화/portrait3.jpeg" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>Michael</h3>
+                            <span>초상화</span>
+                        </div>
+                    </a>
+                    <a href="/img/친구 초상화/portrait4.jpg" class="project" data-type="portrait" data-lightbox="portrait">
+                        <img src="/img/친구 초상화/portrait4.jpg" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>Alan and Daniel</h3>
+                            <span>초상화</span>
+                        </div>
+                    </a>
+                    <a href="/img/친구 초상화/portrait5.jpg" class="project" data-type="portrait" data-lightbox="portrait">
+                        <img src="/img/친구 초상화/portrait5.jpg" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>So and Satoshi</h3>
+                            <span>초상화</span>
+                        </div>
+                    </a>
+                    <a href="/img/친구 초상화/portrait6.jpeg" class="project" data-type="portrait" data-lightbox="portrait">
+                        <img src="/img/친구 초상화/portrait6.jpeg" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>Kanji</h3>
+                            <span>초상화</span>
+                        </div>
+                    </a>
+                    <a href="/img/친구 초상화/portrait7.jpg" class="project" data-type="portrait" data-lightbox="portrait">
+                        <img src="/img/친구 초상화/portrait7.jpg" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>Hiromi</h3>
+                            <span>초상화</span>
+                        </div>
+                    </a>
+                    <a href="/img/친구 초상화/portrait8.jpg" class="project" data-type="portrait" data-lightbox="portrait">
+                        <img src="/img/친구 초상화/portrait8.jpg" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>Joshey</h3>
+                            <span>초상화</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="work__projects">    
+                    <div class="project" data-type="music" style="background-color: transparent; width: 800px; height: 200px;">
+                        흑인음악동아리 - 브레인스워즈
+                        <br />
+                        <br />대학 생활중 가장 기억에 남는 활동을 꼽자면 동아리 활동이라고 할 수 있다.
+                        <br />흑인음악동아리 '브레인스워즈' 활동을 통해 직접 쓴 랩(가사)으로 여러 무대를 경험하고
+                        <br />어디든지 나설 수 있는 자신감을 얻을 수 있었다.
+                        <br />이는 프로젝트 발표, 결혼식 사회 등 목소리를 낼 수 있는 경험으로 이어졌으며
+                        <br />나를 전달할 수 있는 강렬한 표현방법중 하나가 되었다.
+                        <br />지금은 많은 여건상 무대에서 공연을 할 수 없지만 최근에 피아노 연주, MIDI (디지털 작곡) 작업을 시작하면서 
+                        <br />또 다른 형태의 표현 방법으로 음악을 즐기고 있다. 
+                    </div>
+                </div>
+                <div class="work__projects">    
+                    <a href="/img/음악/music1.jpg" class="project" data-type="music" data-lightbox="music">
+                        <img src="/img/음악/music1.jpg" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>동아리 공연</h3>
+                            <span>2015</span>
+                        </div>
+                    </a>
+                    <a href="/img/음악/music2.jpg" class="project" data-type="music" data-lightbox="music">
+                        <img src="/img/음악/music2.jpg" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>동아리 공연</h3>
+                            <span>2015</span>
+                        </div>
+                    </a>
+                    <a href="/img/음악/music3.jpg" class="project" data-type="music" data-lightbox="music">
+                        <img src="/img/음악/music3.jpg" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>동아리 공연</h3>
+                            <span>2014</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="work__projects">    
+                    <div class="project" data-type="painting" style="background-color: transparent; width: 600px; height: 100px;">
+                        캔버스, 디지털 드로잉, 누드크로키 작품
+                    </div>
+                </div>
+                <div class="work__projects">    
+                    <a href="/img/그림, 조형 작업/painting1.jpeg" class="project" data-type="painting" data-lightbox="painting">
+                        <img src="/img/그림, 조형 작업/painting1.jpeg" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>나무 <2018></h3>
+                            <span>아크릴, 캔버스 20호</span>
+                        </div>
+                    </a>
+                    <a href="/img/그림, 조형 작업/painting2.jpeg" class="project" data-type="painting" data-lightbox="painting">
+                        <img src="/img/그림, 조형 작업/painting2.jpeg" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>생명 <2018></h3>
+                            <span>아크릴, 캔버스 20호</span>
+                        </div>
+                    </a>
+                    <a href="/img/그림, 조형 작업/painting3.jpg" class="project" data-type="painting" data-lightbox="painting">
+                        <img src="/img/그림, 조형 작업/painting3.jpg" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>메켄지포이 <2021></h3>
+                            <span>아이패드 디지털 드로잉</span>
+                        </div>
+                    </a>
+                    <a href="/img/그림, 조형 작업/painting4.jpg" class="project" data-type="painting" data-lightbox="painting">
+                        <img src="/img/그림, 조형 작업/painting4.jpg" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>엠마스톤 <2021></h3>
+                            <span>아이패드 디지털 드로잉</span>
+                        </div>
+                    </a>
+                    <a href="/img/그림, 조형 작업/painting5.jpg" class="project" data-type="painting" data-lightbox="painting">
+                        <img src="/img/그림, 조형 작업/painting5.jpg" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>서아 <2020></h3>
+                            <span>아이패드 디지털 드로잉</span>
+                        </div>
+                    </a>
+                    <a href="/img/그림, 조형 작업/painting6.jpeg" class="project" data-type="painting" data-lightbox="painting">
+                        <img src="/img/그림, 조형 작업/painting6.jpeg" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>누드크로키 <2018></h3>
+                            <span>콩테</span>
+                        </div>
+                    </a>
+                    <a href="/img/그림, 조형 작업/painting8.jpg" class="project" data-type="painting" data-lightbox="painting">
+                        <img src="/img/그림, 조형 작업/painting8.jpg" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>길 <2021></h3>
+                            <span>아이패드 디지털 드로잉</span>
+                        </div>
+                    </a>
+                    <a href="/img/그림, 조형 작업/painting9.jpeg" class="project" data-type="painting" data-lightbox="painting">
+                        <img src="/img/그림, 조형 작업/painting9.jpeg" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>물방울 틈 (자화상) <2018></h3>
+                            <span>연필, 한지</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="work__projects">    
+                    <div class="project" data-type="sculpture" style="background-color: transparent; width: 600px; height: 100px;">
+                        물체를 재해석한 조형 작품
+                    </div>
+                </div>
+                <div class="work__projects">    
+                    <a href="/img/그림, 조형 작업/sculpture1.jpeg" class="project" data-type="sculpture" data-lightbox="sculpture">
+                        <img src="/img/그림, 조형 작업/sculpture1.jpeg" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>깃털 <2018></h3>
+                            <span>목재</span>
+                        </div>
+                    </a>
+                    <a href="/img/그림, 조형 작업/sculpture3.jpeg" class="project" data-type="sculpture" data-lightbox="sculpture">
+                        <img src="/img/그림, 조형 작업/sculpture3.jpeg" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>산호 <2018></h3>
+                            <span>우드락</span>
+                        </div>
+                    </a>
+                    <a href="/img/그림, 조형 작업/sculpture2.jpg" class="project" data-type="sculpture" data-lightbox="sculpture">
+                        <img src="/img/그림, 조형 작업/sculpture2.jpg" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>손 <2018></h3>
+                            <span>우드락</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="work__projects">    
+                    <div class="project" data-type="mini" style="background-color: transparent; width: 600px; height: 100px;">
+                        미니게임 토이 프로젝트
+                        <br />
+                        <br />Python의 tkinter를 이용한 4가지 미니게임
+                    </div>
+                </div>
+                <div class="work__projects">    
+                    <a href="/img/미니게임/minigame1.png" class="project" data-type="mini" data-lightbox="mini">
+                        <img src="/img/미니게임/minigame1.png" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>미니게임</h3>
+                            <span>메인화면</span>
+                        </div>
+                    </a>
+                    <a href="/img/미니게임/minigame2.png" class="project" data-type="mini" data-lightbox="mini">
+                        <img src="/img/미니게임/minigame2.png" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>미니게임</h3>
+                            <span>행맨</span>
+                        </div>
+                    </a>
+                    <a href="/img/미니게임/minigame3.png" class="project" data-type="mini" data-lightbox="mini">
+                        <img src="/img/미니게임/minigame3.png" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>미니게임</h3>
+                            <span>미로찾기</span>
+                        </div>
+                    </a>
+                    <a href="/img/미니게임/minigame4.png" class="project" data-type="mini" data-lightbox="mini">
+                        <img src="/img/미니게임/minigame4.png" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>미니게임</h3>
+                            <span>낱말비게임</span>
+                        </div>
+                    </a>
+                    <a href="/img/미니게임/minigame5.png" class="project" data-type="mini" data-lightbox="mini">
+                        <img src="/img/미니게임/minigame5.png" alt="humancolor" class="project__img" >
+                        <div class="project__description">
+                            <h3>미니게임</h3>
+                            <span>짧은글쓰기</span>
+                        </div>
+                    </a>
+                </div>
         </div>
     </section>
 
     <!-- Testimonials -->
-    <section id="testimonials" class="section">
+    <!-- <section id="testimonials" class="section">
         <div class="section__container">
             <section class="testimonials">
                 <h1>Testimonials</h1>
@@ -283,18 +713,18 @@
                 </div>
             </section>
         </div>
-    </section>
+    </section> -->
 
     <!-- Contact -->
-    <section id="contact" class="section">
-        <h1 class="contact__title">Let's talk</h1>
+    <section id="contact" class="section" style="margin-top:80px;">
+        <h1 class="contact__title">Contact Me!</h1>
         <h2 class="contact__email">sy5072@naver.com</h2>
         <div class="contact__links">
             <a href="https://github.com/sy5072" target+"_blank">
                 <i class="fab fa-github"></i>
             </a>
         </div>
-        <p class="contact__rights">2021 Dream Coding Seungyun - All rights reserved</p>
+        <!-- <p class="contact__rights">2021 Dream Coding Seungyun - All rights reserved</p> -->
     </section>
 
      <!-- Arrow up button -->
@@ -302,4 +732,4 @@
          <i class="fas fa-arrow-up"></i>
     </button>
 </body>
-</html>
+</html> 
