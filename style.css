@@ -542,7 +542,7 @@ p {
   #navbar {
     flex-direction: column;
     align-items: flex-start;
-    background-color: var(--color-pink);
+    background-color: var(--color-cobalt);
   }
 
   #navbar.navbar--dark {
